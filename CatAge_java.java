@@ -18,9 +18,10 @@ public class CatAge_java
     }
     
     /**
-     * 
-     * @param in_age
-     * @return
+     * Calculates the "actual" age of a cat based on the age 
+     * that the cat is said to be.
+     * @param in_age The age the user has entered for their cat.
+     * @return The "actual" age of the cat.
      */
     public static double ageConvert(double in_age)
     {
