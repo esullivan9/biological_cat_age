@@ -6,7 +6,7 @@ Module Program
         Dim out_age As Double
 
         Console.Write("Enter the age of your cat: ")
-        in_age = Console.ReadLine()
+        in_age = Double.Parse(Console.ReadLine())
 
         If in_age >= 0.0 And in_age <= 1.0 Then
             out_age = 16.6364 * in_age
