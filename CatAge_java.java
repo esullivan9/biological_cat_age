@@ -11,11 +11,17 @@ public class CatAge_java
         System.out.print("Enter the age of your cat, in years: ");
         double input_age = in.nextDouble();
 
+        //Display to converted age to the screen
         System.out.println("Your cat is " + ageConvert(input_age) + " years old.");
         
         in.close();
     }
-
+    
+    /**
+     * 
+     * @param in_age
+     * @return
+     */
     public static double ageConvert(double in_age)
     {
         if((in_age >= 0.0) && (in_age <= 1.0))
