@@ -6,30 +6,54 @@ namespace catAgeTest
     {
         static void Main(string[] args)
         {
-            double in_age;
-            double out_age;
+            double inAge;
 
             Console.Write("Enter your cat's age, in years: ");
-            in_age = Double.Parse(Console.ReadLine());
-            Console.WriteLine(in_age);
 
-            if(in_age >= 0.0 && in_age <= 1.0)
+            try
             {
-                out_age = 16.6364 * in_age;
-                Console.WriteLine($"Your cat is {out_age} years old.");
-            }
-            else if(in_age > 1.0 && in_age < 2.0)
-            {
-                out_age = 6.6364 * in_age + 10;
-                Console.WriteLine($"Your cat is {out_age} years old.");
-            }
-            else if(in_age >= 2.0)
-            {
-                out_age = 4.1364 * (in_age + 3.62634);
-                Console.WriteLine($"Your cat is {out_age} years old.");
-            }
+                inAge = Double.Parse(Console.ReadLine());
+                
+                if (inAge >= 0)
+                    ConvertAge(inAge);
+                else
+                    Console.WriteLine("Error.");
 
-            Console.ReadKey();
+                Console.ReadKey();
+            }
+            catch(FormatException)
+            {
+                Console.WriteLine("Numbers only!");
+                Console.ReadKey();
+            }
+        }
+
+        private static void ConvertAge(double inAge)
+        {
+            double tmpAge, outAge;
+            if (inAge >= 0.0 && inAge <= 1.0)
+            {
+                tmpAge = 16.6364 * inAge;
+                outAge = Round(tmpAge);
+                Console.WriteLine($"Your cat is {outAge} years old.");
+            }
+            else if (inAge > 1.0 && inAge < 2.0)
+            {
+                tmpAge = 6.6364 * inAge + 10;
+                outAge = Round(tmpAge);
+                Console.WriteLine($"Your cat is {outAge} years old.");
+            }
+            else if (inAge >= 2.0)
+            {
+                tmpAge = 4.1364 * (inAge + 3.62634);
+                outAge = Round(tmpAge);
+                Console.WriteLine($"Your cat is {outAge} years old.");
+            }
+        }
+
+        private static double Round(double inAge)
+        {
+            return Math.Round(inAge * 10000.0) / 10000.0;
         }
     }
 }
