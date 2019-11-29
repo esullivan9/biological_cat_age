@@ -12,7 +12,7 @@ def catage(age):
 		return 'Your cat is %f years old.' %(convertedage)
 
 #Ask for the age of the user's cat.
-print ('Enter the age of your cat (in years): ', end ="")
+print('Enter the age of your cat (in years): ', end ="")
 
 #Convert the input to a float.
 age = (float)(input())
