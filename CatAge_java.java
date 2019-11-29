@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 
 public class CatAge_java
 {
@@ -12,7 +13,7 @@ public class CatAge_java
         double inputAge = in.nextDouble();
 
         //Display to converted age to the screen.
-        System.out.println("Your cat is " + ageConvert(inputAge) + " years old.");
+        System.out.println("Your cat is " + Round(ageConvert(inputAge)) + " years old.");
         
         //Close the scanner.
         in.close();
@@ -34,5 +35,15 @@ public class CatAge_java
             return (4.1364 * (inputAge + 3.62634));
         else
             return 0;
+    }
+
+    /**
+     * Rounds the conversion result to 6 decimal places.
+     * @param in The result from the age conversion.
+     * @return The age conversion rounded to 6 decimal places.
+     */
+    public static double Round(double in)
+    {
+        return Math.round(in * 1000000.0) / 1000000.0;
     }
 }
