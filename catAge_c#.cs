@@ -58,11 +58,11 @@ namespace catAgeTest
             }
         }
 
-        //A convenience function that rounds the result of the conversion 
-        //to 4 decimal places.
+        //A convenience function that rounds the result of  
+        //the conversion to 6 decimal places.
         private static double Round(double inAge)
         {
-            return Math.Round(inAge * 10000.0) / 10000.0;
+            return Math.Round(inAge * 1000000.0) / 1000000.0;
         }
     }
 }
