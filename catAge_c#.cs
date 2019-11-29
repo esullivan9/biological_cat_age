@@ -20,7 +20,7 @@ namespace catAgeTest
                 if (inAge >= 0)
                     //Calls the method to do the conversion, then the
                     //result is displayed to the screen.
-                    ConvertAge(inAge);
+                    Console.WriteLine($"Your cat is {ConvertAge(inAge)} years old.");
                 else
                     Console.WriteLine("Error.");
 
@@ -38,26 +38,23 @@ namespace catAgeTest
         //Method that calculates the "actual" age of a cat 
         //based on the age entered by the user. Displays the
         //result of the conversion to the screen.        
-        private static void ConvertAge(double inAge)
+        private static double ConvertAge(double inAge)
         {
-            double tmpAge, outAge;
+            double tmpAge;
             if (inAge >= 0.0 && inAge <= 1.0)
             {
                 tmpAge = 16.6364 * inAge;
-                outAge = Round(tmpAge);
-                Console.WriteLine($"Your cat is {outAge} years old.");
+                return Round(tmpAge);
             }
             else if (inAge > 1.0 && inAge < 2.0)
             {
                 tmpAge = 6.6364 * inAge + 10;
-                outAge = Round(tmpAge);
-                Console.WriteLine($"Your cat is {outAge} years old.");
+                return Round(tmpAge);
             }
             else if (inAge >= 2.0)
             {
                 tmpAge = 4.1364 * (inAge + 3.62634);
-                outAge = Round(tmpAge);
-                Console.WriteLine($"Your cat is {outAge} years old.");
+                return Round(tmpAge);
             }
         }
 
