@@ -5,11 +5,12 @@ Module Program
         Dim in_age As Double
         Dim out_age As Double
 
-        'Ask the user for their cat's age
+        'Ask the user for their cat's age.
         Console.Write("Enter the age of your cat: ")
         in_age = Double.Parse(Console.ReadLine())
 
-        'Do the conversion and display its result to the screen
+        'Do the conversion based off the user's input
+        'and display the result to the screen.
         If in_age >= 0.0 And in_age <= 1.0 Then
             out_age = 16.6364 * in_age
             Console.WriteLine($"Your cat is {out_age} years old.")
@@ -21,6 +22,7 @@ Module Program
             Console.WriteLine($"Your cat is {out_age} years old.")
         End If
 
+        'So the user can read the result from the calculations.
         Console.ReadLine()
 
     End Sub
