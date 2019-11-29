@@ -8,19 +8,26 @@ namespace catAgeTest
         {
             double inAge;
 
+            //Prompts the user to enter the age they say their cat is.
             Console.Write("Enter your cat's age, in years: ");
 
             try
             {
+                //Takes the user's input and converts it to a double.
                 inAge = Double.Parse(Console.ReadLine());
                 
+                //Makes sure the user entered a valid number.
                 if (inAge >= 0)
+                    //Calls the method to do the conversion, then the
+                    //result is displayed to the screen.
                     ConvertAge(inAge);
                 else
                     Console.WriteLine("Error.");
 
+                //Allows the user to see the result of the function.
                 Console.ReadKey();
             }
+            //Makes sure that the user enters only numbers.
             catch(FormatException)
             {
                 Console.WriteLine("Numbers only!");
@@ -28,6 +35,9 @@ namespace catAgeTest
             }
         }
 
+        //Method that calculates the "actual" age of a cat 
+        //based on the age entered by the user. Displays the
+        //result of the conversion to the screen.        
         private static void ConvertAge(double inAge)
         {
             double tmpAge, outAge;
@@ -51,6 +61,8 @@ namespace catAgeTest
             }
         }
 
+        //A convenience function that rounds the result of the conversion 
+        //to 4 decimal places.
         private static double Round(double inAge)
         {
             return Math.Round(inAge * 10000.0) / 10000.0;
