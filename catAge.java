@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class CatAge_java
+public class catAge
 {
     public static void main(String args[])
     {
