@@ -11,7 +11,7 @@ def convert(catAgeResult):
 	minutes = 60*float('%.6f'%(hours - int(hours)))
 	seconds = 60*float('%.6f'%(minutes - int(minutes)))
 
-	 return '%d years, %d months, %d days, %d hours, %d minutes, %d seconds old.' %(int(years), int(months), int(days), int(hours), int(minutes), int(seconds))
+	return '%d years, %d months, %d days, %d hours, %d minutes, %d seconds old.' %(int(years), int(months), int(days), int(hours), int(minutes), int(seconds))
 
 #Determine which formula to use based on the user's input, 
 #calculate the "actual" age of their cat, then print the
